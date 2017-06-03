@@ -2,12 +2,15 @@
   "name": "rabbit-fn",
   "version": "1.0.0",
   "description": "rabbit",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "git@github.com:selfrefactor/rabbit-fn.git",
   "author": "self_refactor <deyan8284@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "amqplib": "^0.5.1",
     "rambda": "^0.6.1"
+  },
+  "devDependencies": {
+    "env-fn": "^1.0.10"
   }
 }

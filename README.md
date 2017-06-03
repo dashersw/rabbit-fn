@@ -15,10 +15,8 @@ expect(
   sendMessage: Function,
   channel: RabbitMqChannelObject
 })
-const publishOptions = {
-  messageToSend
-}
 rabbit.sendMessage({
-  publishOptions
+  message:"foo",
+  queue:"bar"
 })
 ```
