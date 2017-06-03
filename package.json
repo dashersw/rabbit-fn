@@ -1,6 +1,6 @@
 {
   "name": "rabbit-fn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "rabbit",
   "main": "src/index.js",
   "repository": "git@github.com:selfrefactor/rabbit-fn.git",
