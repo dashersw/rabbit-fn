@@ -5,7 +5,7 @@ const receiveMessage = require("./receiveMessage")
 
 async function rabbitFn (optionalRabbitUrl) {
   try {
-    const rabbitUrl = R.defaultTo(process.env.CLOUDAMQP_URL, optionalRabbitUrl)
+    const rabbitUrl = R.defaultTo(process.env.RABBIT_URL, optionalRabbitUrl)
     const rqConnection = await rqLib.connect(rabbitUrl)
     const rqChannel = await rqConnection.createChannel({ durable : true })
 
@@ -24,8 +24,8 @@ async function rabbitFn (optionalRabbitUrl) {
 
     return {
       channel     : rqChannel,
-      sendMessage : R.curry(sendMessage, {rqChannel}),
-      receiveMessage : R.curry(receiveMessage, {rqChannel}),
+      sendMessage : R.partialCurry(sendMessage, {rqChannel}),
+      receiveMessage : R.partialCurry(receiveMessage, {rqChannel}),
       receiveMessageCallback: receiveMessageCallback
     }
   } catch (err) {

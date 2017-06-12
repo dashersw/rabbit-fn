@@ -8,9 +8,9 @@
   "license": "MIT",
   "dependencies": {
     "amqplib": "^0.5.1",
-    "rambda": "^0.6.1"
+    "rambda": "^0.7.0"
   },
   "devDependencies": {
-    "env-fn": "^1.0.10"
+    "env-fn": "^1.0.12"
   }
 }
